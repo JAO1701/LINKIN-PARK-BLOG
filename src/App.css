@@ -1,38 +1,533 @@
-.App {
+/*Estilos del Header*/
+#Menu {
+  height: 80px; /* Aumenta la altura del contenedor */
+  margin-top: 20px;
+  margin-left: 10px;
+  display: flex; /* Activar Flexbox para el contenedor */
+  align-items: center; /* Alinear elementos verticalmente al centro */
+  justify-content: space-around; /* Distribuir elementos con espacio uniforme */
+  border-radius: 15px;
+  background: linear-gradient(43deg, rgba(0,0,0,1) 0%, rgba(13,13,13,1) 50%, rgba(27,28,28,1) 100%);
+  position: fixed; /* Fijar el menú en su posición */
+  top: 0; /* Posicionarlo en la parte superior */
+  width: 100%; /* Asegurar que el menú ocupe el ancho completo */
+  z-index: 1000; /* Asegurar que el menú esté por encima de otros elementos */
+  user-select: none;
+}
+.logo {
+  height: 100px;
+  width: 100px; /* Tamaño inicial del logo */
+  transition: transform 0.5s ease; /* Suaviza el efecto de transformación */
+  padding: 10px;
+  user-select: none;
+}
+
+.logo:hover {
+  -webkit-transform: scale(1.2) rotateY(180deg); /* Agranda el logo y gira 180 grados sobre el eje Y */
+  transform: scale(1.5) rotateY(180deg); /* Agranda el logo y gira 180 grados sobre el eje Y */
+  -webkit-transform-style: preserve-3d; /* Conserva la perspectiva 3D durante la rotación */
+  transform-style: preserve-3d; /* Conserva la perspectiva 3D durante la rotación */
+}
+
+/* Enlaces */
+#Menu a {
+  height: 100%;
+  width: 100%;
+  align-content: center;
+  text-align: center;
+  border-radius: 15px;
+  color: #ffffff; /* Color del texto del enlace */
+  text-decoration: none; /* Sin subrayado */
+  transition: color 0.3s ease; /* Transición suave para el color del texto */
+  user-select: none;
+}
+#Menu a:hover {
+  color: #ffffff; /* Cambiar el color del texto al pasar el mouse */
+  background: linear-gradient(43deg, rgba(0,0,0,1) 0%, rgba(27,28,28,1), rgba(13,13,13,1) 50% 100%);
+  text-decoration: none; /* Sin subrayado */
+  transition: color 0.3s ease; /* Transición suave para el color del texto */
+  user-select: none;
+}
+
+
+/* Estilos Componente Inicio*/
+
+#inicio {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(43deg, rgba(0,0,0,1) 0%, rgba(13,13,13,1) 50%, rgba(27,28,28,1) 100%);
+  margin: 0 auto;
+  user-select: none;
+}
+#inicio h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 2rem;
+  user-select: none;
+}
+#inicio p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: #ddd;
+  padding: 2rem;
+  text-align: justify;
+  font-family: 'Roboto', sans-serif;
+  user-select: none;
+}
+
+
+
+/* Estilos componente sobre la Banda */
+.la-banda-container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  user-select: none;
+}
+.LaBandaTitulo{
+  display: inline-block;
+  margin-bottom: 25px;
+  transition: all 0.6s ease;
+  padding: 10px;
+  border-radius: 15px;
+  user-select: none;
+}
+.LaBandaTitulo:hover{
+  font-size: 40px; /* Increased font size on hover */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+
+}
+#LaBanda1{
+  text-align: center;
+  margin-bottom: 25px;
+  user-select: none; 
+}
+
+#LaBanda2{
+  text-align: center;
+  margin-top: 110px;
+  margin-bottom: 25px;
+  user-select: none;
+}
+#LaBanda3{
+  text-align: center;
+  margin-top: 110px;
+  margin-bottom: 25px;
+  user-select: none;
+}
+#laBanda-parrafo1 {
+    text-align: justify;
+    user-select: none;
+}
+#imagen-banda1{
+    height: 400px;
+    width: 600px;
+    float: left;
+    padding: 25px;
+    transition: all 0.6s ease;
+    user-select: none;
+}
+#imagen-banda1:hover{
+  transform: scale(1.3) rotate(-5deg); /* Escalar y rotar al mismo tiempo */
+}
+#laBanda-parrafo2 {
+  text-align: justify;
+  margin-top: 35px;
+  user-select: none;
+}
+#imagen-banda2{
+  margin-top: 10px;
+  height: 400px;
+  width: 600px;
+  float: right;
+  padding: 25px;
+  transition: all 0.6s ease;
+  user-select: none;
+}
+#imagen-banda2:hover{
+  transform: scale(1.3) rotate(5deg); /* Escalar y rotar al mismo tiempo */
+ }
+
+#laBanda-parrafo3 {
+  text-align: justify;
+  margin-top: 35px;
+  user-select: none;
+}
+#imagen-banda3{
+  margin-top: 10px;
+  height: 400px;
+  width: 600px;
+  float: left;
+  padding: 25px;
+  transition: all 0.6s ease;
+  user-select: none;
+}
+
+#imagen-banda3:hover{
+  transform: scale(1.3) rotate(-5deg); /* Escalar y rotar al mismo tiempo */
+
+}
+
+  
+
+  
+/* Estilos Componente Galería de Fotos*/
+
+#galeria-de-fotos {
+  padding: 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.GaleriaDeFotos {
+  display: inline-block;
+  margin-bottom: 25px;
+  transition: all 0.6s ease;
+  padding: 10px;
+  border-radius: 15px;
+  margin-bottom: 50px;
+}
+.GaleriaDeFotos:hover{
+  font-size: 40px; /* Increased font size on hover */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+.gallery-container {
+  width: 80%;
+  margin: 0 auto;
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px; /* Espacio entre las imágenes */
+  justify-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.gallery-item {
+  width: 100%;
+  height: 100%;
+  height: auto;
+  border-radius: 10px;
+  max-width: 300px; /* Ajusta el tamaño máximo de las imágenes si es necesario */
+  transition: transform 0.7s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.5);
+}
+
+
+/* Contenedor de sección */
+#chester-tribute {
+  background-color: #000000; /* Fondo oscuro */
+  color: #ddd; /* Color de texto claro */
+  text-align: center; /* Centrar el contenido horizontalmente */
+  margin: 0 auto; /* Centrar el contenido verticalmente */
+  padding: 50px 0; /* Agregar algo de relleno para el espacio */
+}
+
+/* Encabezado (suponiendo que el componente Header utiliza un encabezado) */
+#chester-tribute h1 {
+  display: inline-block;
+  transition: all 0.6s ease;
+  padding: 10px;
+  border-radius: 15px;
+  color: #fff; /* Color de texto blanco */
+}
+#chester-tribute h1:hover {
+  font-size: 40px; /* Increased font size on hover */
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.8); 
+  color: #ffd700; /* Cambio de color al dorado en hover */
+}
+
+/* Subtítulo */
+#ChesterTributeSubt {
+  font-size: 25px; /* Ajustar el tamaño de fuente según sea necesario */
+  margin-bottom: 20px; /* Agregar un poco de espacio después del subtítulo */
+  transition: all 0.6s ease;
+  padding: 10px;
+  border-radius: 15px;
+  color: #fff; /* Color de texto blanco */
+}
+#ChesterTributeSubt:hover {
+  color: #ffd700; /* Cambio de color al dorado en hover */
+}
+
+/* Contenedor de carrusel */
+.Slider-container {
+  width: 800px;
+  height: 550px;
+  margin: 0 auto; /* Centrar el carrusel horizontalmente */
+  border: 3px solid rgba(255, 255, 255, 0.2); /* Borde con transparencia */
+  border-radius: 20px; /* Borde redondeado */
+  box-shadow: 1px 1px 20px yellow; /* Sombra con transparencia */
+  overflow: hidden; /* Para ocultar el contenido que se desborde */
+}
+
+.carousel {
+  position: relative;
+  width: 100%; /* Usar el 100% del ancho del contenedor */
+  height: 100%; /* Usar el 100% de la altura del contenedor */
+}
+
+.carousel-item {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  border-radius: 20px;
+  background-size: cover; /* Evita que la imagen se repita y ajusta al tamaño del contenedor */
+  background-position: center; /* Centra la imagen en el contenedor */
+}
+
+.carousel-item img {
+  display: none;
+}
+.carousel-item.active {
+  opacity: 1;
+}
+
+.sound-icon {
+  background-color: transparent;
+}
+
+/* Estilos Componente Noticias*/
+.Noticias-Container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  user-select: none;
+}
+.Noticias-título {
+  display: inline-block;
+  margin-bottom: 25px;
+  transition: all 0.6s ease;
+  padding: 10px;
+  border-radius: 15px;
+  margin-bottom: 50px;
+}
+.Noticias-título:hover {
+  font-size: 40px; /* Increased font size on hover */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+
+.noticia {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 20px;
+}
+
+.noticia:last-child {
+  border-bottom: none;
+}
+
+.noticia-image {
+  width: 275px;
+  height: 275px;
+  object-fit: cover;
+  margin-right: 5px;
+}
+
+
+.noticia-content {
+  flex: 1;
+  text-align: left;
+  padding: 15PX;
+}
+
+.noticia-content h3 {
+  margin: 0 0 27px;
+  font-size: 23px;
+}
+
+.noticia-content p {
+  margin: 0 0 17px;
+  font-size: 17px;
+}
+
+.noticia-content a {
+  color: #1DB954;
+  text-decoration: none;
+}
+
+.noticia-content a:hover {
+  text-decoration: underline;
+}
+
+
+
+/* Estilos para la sección de VideosDeCovers */
+
+.Videos-Container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  user-select: none;
+}
+
+.Videos-título {
+  display: inline-block;
+  margin-bottom: 25px;
+  transition: all 0.6s ease;
+  padding: 10px;
+  border-radius: 15px;
+  margin-bottom: 50px;
+}
+
+.Videos-título:hover {
+  font-size: 40px; /* Increased font size on hover */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.video {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 20px;
+}
+
+.video:last-child {
+  border-bottom: none;
+}
+
+.video-thumbnail {
+  width: 275px;
+  height: 275px;
+  object-fit: cover;
+  margin-right: 5px;
+  transition: all 0.6s ease;
+}
+.video-thumbnail:hover {
+  width: 290px;
+  height: 290px;
+  object-fit: cover;
+  margin-right: 75px;
+}
+.video-content {
+  flex: 1;
+  text-align: left;
+  padding: 15px;
+}
+
+.video-content h3 {
+  margin: 0 0 20px;
+  font-size: 23px;
+}
+
+.video-content p {
+  margin: 0 0 15px;
+  font-size: 17px;
+}
+
+.video-content a {
+  color: #1DB954;
+  text-decoration: none;
+}
+
+.video-content a:hover {
+  text-decoration: underline;
+}
+
+
+
+/* Estilos para la sección de Suscripción */
+
+
+#Suscripción-container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  user-select: none;
+}
+
+#Suscripción-Título {
+  display: inline-block;
+  margin-top: 15px;
+  transition: all 0.6s ease;
+  padding: 10px;
+  border-radius: 15px;
+  
+}
+
+#Suscripción-Título:hover {
+  font-size: 40px; /* Increased font size on hover */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+#Suscripción-subtítulo {
+  display: block;
+  margin-bottom: 5px;
+  margin-top: 50px;
+  padding: 10px;
+  border-radius: 15px;
+  font-size: 20px;
+  
+}
+
+/* SubscriptionForm.css */
+.subscription-form {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #333333cc;
+  border: 1px solid #979797d8;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.subscription-form form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.subscription-form input {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.subscription-form .button-group {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-top: 5px;
+}
+
+.subscription-form button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.subscription-form button:hover {
+  background-color: #0056b3;
+}
+
+.subscription-form p {
+  margin-top: 5px;
+  text-align: center;
+  color: #28a745;
 }
